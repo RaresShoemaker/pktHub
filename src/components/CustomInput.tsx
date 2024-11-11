@@ -8,9 +8,11 @@ type CustomInputProps = {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const CustomInput:React.FC<CustomInputProps> = ({ label, type = "text", id, value, onChange, ...props }) => {
+const CustomInput: React.FC<CustomInputProps> = ({ label, type = "text", id, value, onChange, ...props }) => {
   const [isFocused, setIsFocused] = useState(false);
-  const [hasValue, setHasValue] = useState(false);
+  
+  // Remove the separate hasValue state and derive it from value
+  const hasValue = value.length > 0;
 
   return (
     <div className="relative">
@@ -18,18 +20,13 @@ const CustomInput:React.FC<CustomInputProps> = ({ label, type = "text", id, valu
         id={id}
         type={type}
         value={value}
+        name={id}
         className="peer w-full h-12 rounded-full border-2 border-white bg-transparent text-white px-6 pt-2 
                  focus:outline-none focus:border-white transition-all placeholder-transparent outline-none"
         placeholder={label}
         onFocus={() => setIsFocused(true)}
-        onBlur={(e) => {
-          setIsFocused(false);
-          setHasValue(e.target.value.length > 0);
-        }}
-        onChange={(e) => {
-          setHasValue(e.target.value.length > 0);
-          onChange(e);
-        }}
+        onBlur={() => setIsFocused(false)}
+        onChange={onChange}
         {...props}
       />
       <label
