@@ -9,7 +9,7 @@ type ChannelCardProps = {
 const ChannelCard: React.FC<ChannelCardProps> = ({ href, logo }) => {
 	return (
 		<Link to={href} target='_blank'>
-			<div className='bg-white hover:bg-transparent hover:border-2 hover:border-white rounded-2xl transition-all duration-200 group outline-none'>
+			<div className='bg-white border-2 border-white hover:bg-transparent rounded-2xl transition-all duration-200 group outline-none'>
 				<div className='rounded-xl p-4 aspect-[4/3] md:aspect-square lg:aspect-[5/3] flex items-center justify-center'>
 					<div
 						className='w-full h-full flex items-center justify-center 

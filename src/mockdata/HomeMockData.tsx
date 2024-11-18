@@ -24,7 +24,7 @@ type HomeMockDataType = {
 const homeMockData: HomeMockDataType[] = [
 	{
 		alt: 'BIA Logo',
-		href: 'https://www.bia.ca/',
+		href: 'https://pkt.cash/ecosystem/',
 		logo: <BIALogo />
 	},
 	{
@@ -44,7 +44,7 @@ const homeMockData: HomeMockDataType[] = [
 	},
 	{
 		alt: 'Radical Logo',
-		href: 'https://www.radical.com/',
+		href: ' https://radicalstudios.com',
 		logo: <RadicalLogo />
 	},
 	{
@@ -79,7 +79,7 @@ const homeMockData: HomeMockDataType[] = [
 	},
 	{
 		alt: 'TuneFM Logo',
-		href: 'https://www.tunefm.com/',
+		href: ' https://tune.fm',
 		logo: <TuneFmLogo />
 	}
 ];
