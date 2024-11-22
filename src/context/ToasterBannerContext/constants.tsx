@@ -6,7 +6,8 @@ const TOASTER_ACTIONS = {
 enum TOASTER_TYPES {
 	SUCCESS = 'success',
 	ERROR = 'error',
-	WARNING = 'warning'
+	WARNING = 'warning',
+	INFO = 'info'
 }
 
 interface Toast {

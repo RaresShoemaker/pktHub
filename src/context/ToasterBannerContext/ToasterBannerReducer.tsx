@@ -1,38 +1,3 @@
-// import { TOASTER_ACTIONS, TOASTER_TYPES } from './constants';
-// import { ToasterBannerState, ToasterBannerAction } from './constants';
-
-// const initialState: ToasterBannerState = {
-// 	showToaster: true,
-// 	toasterMessage: 'Test message',
-// 	toasterType: TOASTER_TYPES.SUCCESS
-// };
-
-// const toasterReducer = (state: ToasterBannerState, action: ToasterBannerAction) => {
-// 	switch (action.type) {
-// 		case TOASTER_ACTIONS.SHOW_TOASTER:
-// 			return {
-// 				...state,
-// 				showToaster: true,
-// 				toasterMessage: action.payload.message,
-// 				toasterType: action.payload.type
-// 			};
-
-// 		case TOASTER_ACTIONS.HIDE_TOASTER:
-// 			return {
-// 				...state,
-// 				showToaster: false,
-// 				toasterMessage: '',
-// 				toasterType: null
-// 			};
-
-// 		default:
-// 			throw new Error('Invalid action type' + action.type);
-// 	}
-// };
-
-// export { initialState, toasterReducer };
-
-// ToasterBannerReducer.ts
 import { Toast, ToasterBannerState, ToasterBannerAction, TOASTER_ACTIONS } from './constants';
 
 const initialState: ToasterBannerState = {

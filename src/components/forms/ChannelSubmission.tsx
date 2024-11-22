@@ -65,6 +65,7 @@ const ChannelSubmissionForm = () => {
         form.q12_email.value = formData.email;
         form.q7_typeA7.value = formData.platform_description;
         form.q8_typeA8.value = formData.platform_link;
+        form.q14_verifiedEmail.value = 'null';
         
         const fileList = new DataTransfer();
         if (file) fileList.items.add(file);
@@ -75,7 +76,7 @@ const ChannelSubmissionForm = () => {
         
         form.target = 'hidden_iframe';
         form.submit();
-        showToast('Form submitted successfully!', TOASTER_TYPES.SUCCESS, 3000);
+        showToast('You must verify your email to submit', TOASTER_TYPES.INFO, 10000);
         resetForm();
       }
     } catch (error) {
@@ -138,7 +139,7 @@ const ChannelSubmissionForm = () => {
       <iframe 
         name="hidden_iframe" 
         ref={iframeRef}
-        className='hidden'
+        className="hidden"
         title="Hidden Frame"
       />
 
@@ -147,7 +148,7 @@ const ChannelSubmissionForm = () => {
         action={`https://submit.jotform.com/submit/${FORM_ID}`}
         method="post"
         encType="multipart/form-data"
-        className='hidden'
+        className="hidden"
         target="hidden_iframe"
       >
         <input type="hidden" name="formID" value={FORM_ID} />
@@ -155,6 +156,7 @@ const ChannelSubmissionForm = () => {
         <input type="email" name="q12_email" />
         <input type="text" name="q7_typeA7" />
         <input type="text" name="q8_typeA8" />
+        <input type="text" name="q14_verifiedEmail" />
         <input type="file" name="q11_fileUpload[]" multiple />
       </form>
     </>
