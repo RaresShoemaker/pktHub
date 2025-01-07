@@ -1,0 +1,166 @@
+{
+  "categories": [
+    {
+      "id": "media",
+      "name": "Media",
+      "platforms": [
+        {
+          "id": "media-mockdata-1",
+          "name": "Media-MockData-1",
+          "logo": "/images/media-mockdata-1.svg",
+          "description": "Streaming platform description for Media-MockData-1",
+          "url": "https://media-mockdata-1.com",
+          "status": "active",
+          "searchTags": ["streaming", "video", "movies"],
+          "metadata": {
+            "launchYear": 2020,
+            "region": "global"
+          }
+        },
+        {
+          "id": "media-mockdata-2",
+          "name": "Media-MockData-2",
+          "logo": "/images/media-mockdata-2.svg",
+          "description": "Streaming platform description for Media-MockData-2",
+          "url": "https://media-mockdata-2.com",
+          "status": "active",
+          "searchTags": ["streaming", "series", "entertainment"],
+          "metadata": {
+            "launchYear": 2021,
+            "region": "europe"
+          }
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "platforms": [
+        {
+          "id": "music-mockdata-1",
+          "name": "Music-MockData-1",
+          "logo": "/images/music-mockdata-1.svg",
+          "description": "Music streaming service for Music-MockData-1",
+          "url": "https://music-mockdata-1.com",
+          "status": "active",
+          "searchTags": ["music", "streaming", "podcasts"],
+          "metadata": {
+            "launchYear": 2019,
+            "region": "global"
+          }
+        },
+        {
+          "id": "music-mockdata-2",
+          "name": "Music-MockData-2",
+          "logo": "/images/music-mockdata-2.svg",
+          "description": "Music streaming service for Music-MockData-2",
+          "url": "https://music-mockdata-2.com",
+          "status": "active",
+          "searchTags": ["music", "radio", "live"],
+          "metadata": {
+            "launchYear": 2020,
+            "region": "americas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "games",
+      "name": "Games",
+      "platforms": [
+        {
+          "id": "games-mockdata-1",
+          "name": "Games-MockData-1",
+          "logo": "/images/games-mockdata-1.svg",
+          "description": "Gaming platform for Games-MockData-1",
+          "url": "https://games-mockdata-1.com",
+          "status": "active",
+          "searchTags": ["gaming", "esports", "multiplayer"],
+          "metadata": {
+            "launchYear": 2022,
+            "region": "global"
+          }
+        },
+        {
+          "id": "games-mockdata-2",
+          "name": "Games-MockData-2",
+          "logo": "/images/games-mockdata-2.svg",
+          "description": "Gaming platform for Games-MockData-2",
+          "url": "https://games-mockdata-2.com",
+          "status": "active",
+          "searchTags": ["gaming", "blockchain", "nft"],
+          "metadata": {
+            "launchYear": 2023,
+            "region": "asia"
+          }
+        }
+      ]
+    },
+    {
+      "id": "casino",
+      "name": "Casino",
+      "platforms": [
+        {
+          "id": "casino-mockdata-1",
+          "name": "Casino-MockData-1",
+          "logo": "/images/casino-mockdata-1.svg",
+          "description": "Online casino platform for Casino-MockData-1",
+          "url": "https://casino-mockdata-1.com",
+          "status": "active",
+          "searchTags": ["casino", "gambling", "slots"],
+          "metadata": {
+            "launchYear": 2021,
+            "region": "europe"
+          }
+        },
+        {
+          "id": "casino-mockdata-2",
+          "name": "Casino-MockData-2",
+          "logo": "/images/casino-mockdata-2.svg",
+          "description": "Online casino platform for Casino-MockData-2",
+          "url": "https://casino-mockdata-2.com",
+          "status": "active",
+          "searchTags": ["casino", "poker", "betting"],
+          "metadata": {
+            "launchYear": 2022,
+            "region": "americas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "platforms": [
+        {
+          "id": "technology-mockdata-1",
+          "name": "Technology-MockData-1",
+          "symbol": "TECH1",
+          "logo": "/images/technology-mockdata-1.svg",
+          "description": "Blockchain platform for Technology-MockData-1",
+          "url": "https://technology-mockdata-1.com",
+          "status": "active",
+          "searchTags": ["blockchain", "crypto", "defi"],
+          "metadata": {
+            "launchYear": 2020,
+            "network": "mainnet"
+          }
+        },
+        {
+          "id": "technology-mockdata-2",
+          "name": "Technology-MockData-2",
+          "symbol": "TECH2",
+          "logo": "/images/technology-mockdata-2.svg",
+          "description": "Blockchain platform for Technology-MockData-2",
+          "url": "https://technology-mockdata-2.com",
+          "status": "active",
+          "searchTags": ["blockchain", "smart contracts", "web3"],
+          "metadata": {
+            "launchYear": 2021,
+            "network": "testnet"
+          }
+        }
+      ]
+    }
+  ]
+}
