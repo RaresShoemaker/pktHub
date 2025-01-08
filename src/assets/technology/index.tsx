@@ -17,7 +17,7 @@ import TonLogoRegular from './TonLogoRegular.svg?react';
 import TronLogoRegular from './TronLogoRegular.svg?react';
 import UniswapLogoRegular from './UniswapLogoRegular.svg?react';
 import VechainLogoRegular from './VechainLogoRegular.svg?react';
-import VectorLogoRegular from './VectorLogoRegular.svg?react';
+import CosmosLogoRegular from './CosmosLogoRegular.svg?react';
 
 //white version
 import AkashLogoWhite from './AkashLogoWhite.svg?react';
@@ -34,7 +34,7 @@ import SolanaLogoWhite from './SolanaLogoWhite.svg?react';
 import StellarLogoWhite from './StellarLogoWhite.svg?react';
 import TronLogoWhite from './TronLogoWhite.svg?react';
 import UniswapLogoWhite from './UniswapLogoWhite.svg?react';
-import VectorLogoWhite from './VectorLogoWhite.svg?react';
+import CosmosLogoWhite from './CosmosLogoWhite.svg?react';
 
 export {
   AkashLogoRegular,
@@ -56,7 +56,7 @@ export {
   TronLogoRegular,
   UniswapLogoRegular,
   VechainLogoRegular,
-  VectorLogoRegular,
+  CosmosLogoRegular,
   AkashLogoWhite,
   ArbitrumLogoWhite,
   AvalancheLogoWhite,
@@ -71,5 +71,5 @@ export {
   StellarLogoWhite,
   TronLogoWhite,
   UniswapLogoWhite,
-  VectorLogoWhite
+  CosmosLogoWhite
 }

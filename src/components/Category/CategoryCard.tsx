@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom';
 export interface CategoryCardProps {
     alt: string;
     logo: React.ReactNode;
+    logoWhite?: React.ReactNode;
     href: string;
 }
 
-const CategoryCard: React.FC<CategoryCardProps> = ({ alt, logo, href }) => {
+const CategoryCard: React.FC<CategoryCardProps> = ({ alt, logo, logoWhite, href }) => {
     return (
         <div className="flex flex-col gap-4">
             <Link 
                 to={href} 
                 target="_blank" 
-                className="block w-[145px] md:w-[224.5px] transition-all duration-200"
+                className="w-full transition-all duration-200"
             >
                 <div 
                     className="w-full h-[100px] md:h-[120px] bg-white rounded-2xl transition-all duration-200 group relative overflow-hidden"
@@ -34,7 +35,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ alt, logo, href }) => {
                             boxShadow: '0px 0px 40px rgba(26, 41, 179, 0.48)'
                         }}
                     >
-                        {logo}
+                        {logoWhite || logo}
                     </div>
                 </div>
             </Link>

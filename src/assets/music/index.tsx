@@ -7,16 +7,17 @@ import EmusicLogoRegular from './EmusicLogoRegular.svg?react';
 import MeshLogoRegular from './MeshLogoRegular.svg?react';
 import MusiLogoRegular from './MusiLogoRegular.svg?react';
 import MyceliaLogoRegular from './MyceliaLogoRegular.svg?react';
-import PaperchainLogoRegular from 'PaperchainLogoRegular.svg?react';
+import PaperLogoRegular from './PaperchainLogoRegular.svg?react';
 import ResonateLogoRegular from './ResonateLogoRegular.svg?react';
 import RoyalLogoRegular from './RoyalLogoRegular.svg?react';
 import SoundLogoRegular from './SoundLogoRegular.svg?react';
 import SpotifyLogoRegular from './SpotifyLogoRegular.svg?react';
 import StemLogoRegular from './StemLogoRegular.svg?react';
-import TuneFmLogoRegular from 'TuneFmLogoRegular.svg?react';
-import ViberateLogoRegular from 'ViberateLogoRegular.svg?react';
-import YtbLogoRegular from 'YtbLogoRegular.svg?react';
-import ZoraLogoRegular from 'ZoraLogoRegular.svg?react';
+import TuneFmLogoRegular from './TuneFmLogoRegular.svg?react';
+import ViberateLogoRegular from './ViberateLogoRegular.svg?react';
+import YtbLogoRegular from './YtbLogoRegular.svg?react';
+import ZoraLogoRegular from './ZoraLogoRegular.svg?react';
+import RevelatorLogoRegular from './RevelatorLogoRegular.svg?react';
 
 
 import AppleMusicLogoWhite from './AppleMusicLogoWhite.svg?react';
@@ -28,16 +29,17 @@ import EmusicLogoWhite from './EmusicLogoWhite.svg?react';
 import MeshLogoWhite from './MeshLogoWhite.svg?react';
 import MusiLogoWhite from   './MusiLogoWhite.svg?react';
 import MyceliaLogoWhite from './MyceliaLogoWhite.svg?react';
-import PaperchainLogoWhite from 'PaperchainLogoWhite.svg?react';
+import PaperLogoWhite from './PaperchainLogoWhite.svg?react';
 import ResonateLogoWhite from './ResonateLogoWhite.svg?react';
 import RoyalLogoWhite from './RoyalLogoWhite.svg?react';
 import SoundLogoWhite from './SoundLogoWhite.svg?react';
 import SpotifyLogoWhite from './SpotifyLogoWhite.svg?react';
 import StemLogoWhite from './StemLogoWhite.svg?react';
 import TuneFmLogoWhite from './TuneFmLogoWhite.svg?react';
-import ViberateLogoWhite from './VibrateLogoWhite.svg?react';
+import ViberateLogoWhite from './ViberateLogoWhite.svg?react';
 import YtbLogoWhite from './YtbLogoWhite.svg?react';
 import ZoraLogoWhite from './ZoraLogoWhite.svg?react';
+import RevelatorLogoWhite from './RevelatorLogoWhite.svg?react';
 
 export {
     AppleMusicLogoRegular,
@@ -49,7 +51,7 @@ export {
     MeshLogoRegular,
     MusiLogoRegular,
     MyceliaLogoRegular,
-    PaperchainLogoRegular,
+    PaperLogoRegular,
     ResonateLogoRegular,
     RoyalLogoRegular,
     SoundLogoRegular,
@@ -68,7 +70,7 @@ export {
     MeshLogoWhite,
     MusiLogoWhite,
     MyceliaLogoWhite,
-    PaperchainLogoWhite,
+    PaperLogoWhite,
     ResonateLogoWhite,
     RoyalLogoWhite,
     SoundLogoWhite,
@@ -77,5 +79,7 @@ export {
     TuneFmLogoWhite,
     ViberateLogoWhite,
     YtbLogoWhite,
-    ZoraLogoWhite
+    ZoraLogoWhite,
+    RevelatorLogoRegular,
+    RevelatorLogoWhite
 }
