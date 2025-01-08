@@ -18,7 +18,7 @@ const MenuCategory: React.FC = () => {
 	);
 
 	return (
-		<div className='h-full rounded-2xl bg-[#1B1B1B] px-4 py-6 md:flex flex-col justify-between hidden'>
+		<div className='h-full rounded-2xl bg-[#1B1B1B] px-4 py-6 md:flex flex-col justify-between hidden shadow-[0_0_40px_0_rgba(62,74,192,0.24)]'>
 			<div className='flex flex-col gap-4 align-middle	'>
 				{menuItems.map((item, i) => {
 					return <MenuButton key={i} title={item.title} icon={item.icon} query={item.query} />;

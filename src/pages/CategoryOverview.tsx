@@ -1,15 +1,17 @@
 import React from 'react';
 import CategoryOverviewLayout from '../layouts/CategoryOverviewLayout';
+import CategoryContainer from '../components/Category/CategoryContainer';
+import { homeMockData } from '../mockdata/HomeMockData';
 
 const CategoryOverviewPage: React.FC = () => {
   return (
     <CategoryOverviewLayout>
-      <div className='bg-green-500 rounded-lg'>
-        {Array.from({ length: 20 }).map((_, i) => (
-          <div key={i} className="p-4 border-b">
-            Scrollable content section {i + 1}
-          </div>
-        ))}
+      <div className='flex flex-col gap-4'>
+      <CategoryContainer title='Media' cards={homeMockData} />
+      <CategoryContainer title='Media' cards={homeMockData} />
+      <CategoryContainer title='Media' cards={homeMockData} />
+      <CategoryContainer title='Media' cards={homeMockData} />
+      <CategoryContainer title='Media' cards={homeMockData} />
       </div>
     </CategoryOverviewLayout>
   );

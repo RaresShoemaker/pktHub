@@ -23,47 +23,47 @@ type HomeMockDataType = {
 
 const homeMockData: HomeMockDataType[] = [
 	{
-		alt: 'BIA Logo',
+		alt: 'BIA',
 		href: 'https://pkt.cash/ecosystem/',
 		logo: <BIALogo />
 	},
 	{
-		alt: 'Netflix Logo',
+		alt: 'Netflix',
 		href: 'https://www.netflix.com/',
 		logo: <NetflixLogo />
 	},
 	{
-		alt: 'Hulu Logo',
+		alt: 'Hulu',
 		href: 'https://www.hulu.com/',
 		logo: <HuluLogo />
 	},
 	{
-		alt: 'Rumble Logo',
+		alt: 'Rumble',
 		href: 'https://rumble.com/',
 		logo: <RumbleLogo />
 	},
 	{
-		alt: 'Radical Logo',
+		alt: 'Radical',
 		href: ' https://radicalstudios.com',
 		logo: <RadicalLogo />
 	},
 	{
-		alt: 'Youtube Logo',
+		alt: 'Youtube',
 		href: 'https://www.youtube.com/',
 		logo: <YoutubeLogo />
 	},
 	{
-		alt: 'Amazon Prime Logo',
+		alt: 'Amazon Prime',
 		href: 'https://www.amazon.com/',
 		logo: <AmzPrimeLogo />
 	},
 	{
-		alt: 'HBO Max Logo',
+		alt: 'HBO Max',
 		href: 'https://www.hbomax.com/',
 		logo: <HBOMaxLogo />
 	},
 	{
-		alt: 'Apple TV Logo',
+		alt: 'Apple TV',
 		href: 'https://www.apple.com/apple-tv-plus/',
 		logo: <AppleTvLogo />
 	},
@@ -73,12 +73,12 @@ const homeMockData: HomeMockDataType[] = [
 		logo: <ESPNLogo />
 	},
 	{
-		alt: 'MLB Logo',
+		alt: 'MLB',
 		href: 'https://www.mlb.com/',
 		logo: <MLBLogo />
 	},
 	{
-		alt: 'TuneFM Logo',
+		alt: 'TuneFM',
 		href: ' https://tune.fm',
 		logo: <TuneFmLogo />
 	}

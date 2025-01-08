@@ -10,6 +10,7 @@ import AppleTvLogo from './AppleTv.svg?react';
 import ESPNLogo from './ESPN.svg?react';
 import MLBLogo from './MLB.svg?react';
 import TuneFmLogo from './TuneFm.svg?react';
+import PktHubLogo from './PktHubLogo.svg'
 
 export {
 	BIALogo,
@@ -23,5 +24,6 @@ export {
 	AppleTvLogo,
 	ESPNLogo,
 	MLBLogo,
-	TuneFmLogo
+	TuneFmLogo,
+	PktHubLogo
 };
