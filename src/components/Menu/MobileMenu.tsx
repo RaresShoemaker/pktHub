@@ -66,7 +66,7 @@ const MobileMenu = () => {
 
 	return (
 		<>
-			<div className='h-12 w-12 bg-white/65 rounded-full p-1'>
+			<div className='h-12 w-12 bg-white/25 rounded-full p-1 backdrop-blur-md'>
 				<button
 					onClick={() => setIsOpen(true)}
 					className='p-2 text-white hover:text-gray-300 transition-colors md:hidden'

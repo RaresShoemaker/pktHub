@@ -1,13 +1,11 @@
 import React from 'react';
 
 interface TransitionGradientProps {
-  gradient: string[];
-  size?: "SM" | "MD" | "LG";
+	gradient: string[];
+	size?: 'SM' | 'MD' | 'LG';
 }
 
-const TransitionGradient: React.FC<TransitionGradientProps> = ({
-  gradient = ["rgba(9, 13, 35, 0.98)"],
-}) => {
+const TransitionGradient: React.FC<TransitionGradientProps> = ({ gradient = ['rgba(9, 13, 35, 0.98)'] }) => {
 	return (
 		<>
 			<div
@@ -20,7 +18,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = ({
 					zIndex: 1,
 					left: '50%',
 					transform: 'translateX(-50%)',
-					width: '100%'
+					width: '120%'
 				}}
 			/>
 			<div
@@ -33,7 +31,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = ({
 					zIndex: 1,
 					left: '50%',
 					transform: 'translateX(-50%)',
-					width: '100%'
+					width: '120%'
 				}}
 			/>
 			<div
@@ -46,7 +44,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = ({
 					zIndex: 1,
 					left: '50%',
 					transform: 'translateX(-50%)',
-					width: '100%'
+					width: '120%'
 				}}
 			/>
 		</>
