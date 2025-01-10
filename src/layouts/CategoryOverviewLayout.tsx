@@ -1,8 +1,8 @@
 import React from 'react';
-import Footer from '../components/Footer';
 import MenuCategory from '../components/Menu/Menu';
 import HeroContainer from '../components/Hero/HeroContainer';
 import MobileMenu from '../components/Menu/MobileMenu';
+import CategoryBgTransition from '../components/Category/CategoryBgTransition';
 
 interface CategoryOverviewLayout {
     children: React.ReactNode;
@@ -10,15 +10,12 @@ interface CategoryOverviewLayout {
 
 const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) => {
     return (
-        <div className="flex flex-col min-h-dvh bg-gradient-to-b from-[#090D23] to-[#1D2343]">
+        <CategoryBgTransition >
             {/* Main scrollable container */}
             <div className="flex-grow relative">
                 {/* Hero Container */}
                 <div className="absolute inset-0 overflow-x-hidden">
-                    <HeroContainer
-                        images={['BgTest.png', 'PktHome.png']}
-                        transitionGradient={['rgba(9, 13, 35, 0.98)', 'rgba(9, 13, 35, 0.95)', 'rgba(9, 13, 35, 0.97)']}
-                    />
+                    <HeroContainer />
                 </div>
 
                 {/* Overflow wrapper */}
@@ -39,7 +36,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                             <div className="overflow-x-hidden">
                                 <div className="flex flex-col">
                                     {/* Spacer */}
-                                    <div className="md:h-[700px]" />
+                                    <div className="md:h-[500px]" />
 
                                     {/* Content */}
                                     <div className="w-full">
@@ -51,9 +48,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                     </div>
                 </div>
             </div>
-
-            <Footer />
-        </div>
+        </CategoryBgTransition>
     );
 };
 

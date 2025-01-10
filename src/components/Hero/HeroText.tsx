@@ -8,7 +8,7 @@ interface HeroTextProps {
 const HeroText: React.FC<HeroTextProps> = ({title ,description}) => {
 
   return (
-    <div className="absolute w-full md:w-fit md:right-10 mt-[550px] z-10" >
+    <div className="absolute w-full md:w-fit md:right-10 mt-[350px] z-10" >
       <div className='h-full w-full flex flex-col gap-2 items-center justify-center text-white'>
         <h1 className='text-5xl font-bold'>
           {title}

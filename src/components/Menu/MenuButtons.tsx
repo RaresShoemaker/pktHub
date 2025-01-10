@@ -14,15 +14,12 @@ const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query }) => {
   const currentCategory = searchParams.get('category');
   
   const isSelected = !query ? 
-    location.pathname === '/overview' && !currentCategory :
+    location.pathname === '/' && !currentCategory :
     currentCategory === query || (!currentCategory && query === 'home');
   
   return (
     <Link 
-      to={{
-        pathname: "/overview",
-        search: query ? `?category=${query}` : ''
-      }}
+      to={query ? `/?category=${query}` : '/'}
     >
       <div 
         className={cn(

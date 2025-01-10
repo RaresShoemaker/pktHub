@@ -1,43 +1,44 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
+import { useTransitionAnimation } from '../../context/TransitionAnimationContext/TransitionAnimationContext';
+import { TRANSITION_DURATION } from '../../context/TransitionAnimationContext/constants';
 
-interface HeroImageProps {
-  images: string[];
-  transitionDuration?: number;
-  intervalDuration?: number;
-}
+const HeroImage: React.FC = () => {
+  const { activeIndex, isTransitioning, nextIndex, category } = useTransitionAnimation();
 
-const HeroImage: React.FC<HeroImageProps> = ({
-  images,
-  transitionDuration = 1000,
-  intervalDuration = 10000,
-}) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [nextIndex, setNextIndex] = useState(1);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const getImagesByCategory = (category: string | null): string[] => {
+    switch (category) {
+      case 'home':
+        return [
+          '/Home1.svg', '/Home2.svg', '/Home3.svg'
+        ];
+      case 'media':
+        return [
+          '/Media1.svg', '/Media2.svg', '/Media3.svg'
+        ];
+      case 'music':
+        return [
+          '/Music1.svg', '/Music2.svg', '/Music3.svg'
+        ];
+      case 'games':
+        return [
+          '/Games1.svg', '/Games2.svg', '/Games3.svg'
+        ];
+      case 'casino':
+        return [
+          '/Casino1.svg', '/Casino2.svg', '/Casino3.svg', '/Casino4.svg'
+        ];
+      case 'technology':
+        return [
+          '/Technology1.svg', '/Technology2.svg', '/Technology3.svg'
+        ];
+      default:
+        return [
+          '/Home1.svg', '/Home2.svg', '/Home3.svg'
+        ];
+    }
+  };
 
-  const transitionToNextImage = useCallback(() => {
-    if (images.length < 2) return;
-    
-    setIsTransitioning(true);
-    
-    // Set up the next transition after current one completes
-    const transitionTimeout = setTimeout(() => {
-      setActiveIndex(nextIndex);
-      setNextIndex((nextIndex + 1) % images.length);
-      setIsTransitioning(false);
-    }, transitionDuration);
-
-    return () => clearTimeout(transitionTimeout);
-  }, [images.length, nextIndex, transitionDuration]);
-
-  useEffect(() => {
-    if (images.length < 2) return;
-
-    const intervalId = setInterval(transitionToNextImage, intervalDuration);
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [images.length, intervalDuration, transitionToNextImage]);
+  const images = getImagesByCategory(category);
 
   if (!images || images.length === 0) return null;
   
@@ -51,26 +52,29 @@ const HeroImage: React.FC<HeroImageProps> = ({
     );
   }
 
+  const currentImageIndex = activeIndex % images.length;
+  const nextImageIndex = nextIndex % images.length;
+
   const transitionStyle = {
-    transition: `opacity ${transitionDuration}ms ease-in-out`,
+    transition: `opacity ${TRANSITION_DURATION}ms ease-in-out`,
   };
 
   return (
     <div className="relative h-full w-full overflow-hidden">
       {/* Next image (bottom layer) */}
       <img
-        key={`next-${nextIndex}`}
-        src={images[nextIndex]}
+        key={`next-${nextImageIndex}`}
+        src={images[nextImageIndex]}
         alt="Hero Background Next"
         className="absolute inset-0 object-cover h-full w-full"
       />
       
       {/* Current image (top layer) */}
       <img
-        key={`active-${activeIndex}`}
-        src={images[activeIndex]}
+        key={`active-${currentImageIndex}`}
+        src={images[currentImageIndex]}
         alt="Hero Background Current"
-        className={`absolute inset-0 object-cover h-full w-full`}
+        className="absolute inset-0 object-cover h-full w-full"
         style={{
           ...transitionStyle,
           opacity: isTransitioning ? 0 : 1,

@@ -18,7 +18,7 @@ interface Toast {
 }
 
 interface ToasterBannerPayload extends Omit<Toast, 'id'> {
-	id?: string; // Make id optional in payload since we'll generate it
+	id?: string;
 }
 
 interface ToasterBannerAction {

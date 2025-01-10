@@ -1,5 +1,4 @@
-import HomePage from './Home';
 import SubmissionPage from './Submission';
-import CategoryOverviewPage from './CategoryOverview';
+import HomePage from './Home';
 
-export { HomePage, SubmissionPage, CategoryOverviewPage };
+export { HomePage, SubmissionPage };

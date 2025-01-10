@@ -1,28 +1,44 @@
 import React from 'react';
-import { homeMockData } from '../mockdata/HomeMockData';
-import ChannelCard from '../components/ChannelCard';
-import { Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+import CategoryOverviewLayout from '../layouts/CategoryOverviewLayout';
+import CategoryContainer from '../components/Category/CategoryContainer';
+import { CategoryData } from '../mockdata/CategoryMockData';
 
-const HomePage: React.FC = () => {
+const Home: React.FC = () => {
+	const [searchParams] = useSearchParams();
+	const category = React.useMemo(() => searchParams.get('category'), [searchParams]);
 
+	const categoryData = React.useMemo(() => {
+		if (category && CategoryData[category]) {
+			return CategoryData[category];
+		}
+		return null;
+	}, [category]);
+
+	if (categoryData) {
+		// If a specific category is selected, show all its cards in a grid
+		return (
+			<CategoryOverviewLayout>
+				<CategoryContainer title={categoryData.title} cards={categoryData.data} isFullPage={true} />
+			</CategoryOverviewLayout>
+		);
+	}
+
+	// If no specific category is selected, show all categories in the horizontal scroll format
 	return (
-		<section className='flex flex-col h-full gap-8'>
-			<div className='h-fit py-2 self-center md:self-end mt-10 md:mt-8'>
-        <Link to='/submission'>
-				<button  className='bg-white text-primary font-semibold p-3 px-4 md:p-4 rounded-full'>
-					Submit Channel
-				</button>
-        </Link>
+		<CategoryOverviewLayout>
+			<div className='flex flex-col gap-4'>
+				{Object.entries(CategoryData).map(([key, categoryInfo]) => (
+					<CategoryContainer
+						key={key}
+						title={categoryInfo.title}
+						cards={categoryInfo.data}
+						isFullPage={false}
+					/>
+				))}
 			</div>
-			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full mx-auto">
-        {React.Children.toArray(
-          homeMockData.map(({ logo, href }) => (
-            <ChannelCard logo={logo} href={href} />
-          ))
-        )}
-      </div>
-		</section>
+		</CategoryOverviewLayout>
 	);
 };
 
-export default HomePage;
+export default Home;
