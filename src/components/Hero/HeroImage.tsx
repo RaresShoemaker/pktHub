@@ -24,9 +24,9 @@ const HeroImage: React.FC = () => {
     switch (category) {
       case 'home':
         return [
-          `/Home1${mobileSuffix}.svg`,
-          `/Home2${mobileSuffix}.svg`,
-          `/Home3${mobileSuffix}.svg`
+          `/Home1.svg`,
+          `/Home2.svg`,
+          `/Home3.svg`
         ];
       case 'media':
         return [
