@@ -1,39 +1,69 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTransitionAnimation } from '../../context/TransitionAnimationContext/TransitionAnimationContext';
 import { TRANSITION_DURATION } from '../../context/TransitionAnimationContext/constants';
 
 const HeroImage: React.FC = () => {
   const { activeIndex, isTransitioning, nextIndex, category } = useTransitionAnimation();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 425); // Standard mobile breakpoint
+    };
+
+    checkMobile();
+
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const getImagesByCategory = (category: string | null): string[] => {
+    const mobileSuffix = isMobile ? '-mobile' : '';
+
     switch (category) {
       case 'home':
         return [
-          '/Home1.svg', '/Home2.svg', '/Home3.svg'
+          `/Home1${mobileSuffix}.svg`,
+          `/Home2${mobileSuffix}.svg`,
+          `/Home3${mobileSuffix}.svg`
         ];
       case 'media':
         return [
-          '/Media1.svg', '/Media2.svg', '/Media3.svg'
+          `/Media1${mobileSuffix}.svg`,
+          `/Media2${mobileSuffix}.svg`,
+          `/Media3${mobileSuffix}.svg`
         ];
       case 'music':
         return [
-          '/Music1.svg', '/Music2.svg', '/Music3.svg'
+          `/Music1${mobileSuffix}.svg`,
+          `/Music2${mobileSuffix}.svg`,
+          `/Music3${mobileSuffix}.svg`
         ];
       case 'games':
         return [
-          '/Games1.svg', '/Games2.svg', '/Games3.svg'
+          `/Games1${mobileSuffix}.svg`,
+          `/Games2${mobileSuffix}.svg`,
+          `/Games3${mobileSuffix}.svg`
         ];
       case 'casino':
         return [
-          '/Casino1.svg', '/Casino2.svg', '/Casino3.svg', '/Casino4.svg'
+          `/Casino1${mobileSuffix}.svg`,
+          `/Casino2${mobileSuffix}.svg`,
+          `/Casino3${mobileSuffix}.svg`,
+          `/Casino4${mobileSuffix}.svg`
         ];
       case 'technology':
         return [
-          '/Technology1.svg', '/Technology2.svg', '/Technology3.svg'
+          `/Technology1${mobileSuffix}.svg`,
+          `/Technology2${mobileSuffix}.svg`,
+          `/Technology3${mobileSuffix}.svg`
         ];
       default:
         return [
-          '/Home1.svg', '/Home2.svg', '/Home3.svg'
+          `/Home1${mobileSuffix}.svg`,
+          `/Home2${mobileSuffix}.svg`,
+          `/Home3${mobileSuffix}.svg`
         ];
     }
   };
@@ -47,7 +77,7 @@ const HeroImage: React.FC = () => {
       <img
         src={images[0]}
         alt="Hero Background"
-        className="absolute inset-0 object-cover h-full w-full"
+        // className="absolute "
       />
     );
   }
@@ -66,7 +96,7 @@ const HeroImage: React.FC = () => {
         key={`next-${nextImageIndex}`}
         src={images[nextImageIndex]}
         alt="Hero Background Next"
-        className="absolute inset-0 object-cover h-full w-full"
+        className="absolute inset-0 md:object-cover md:h-full md:w-full"
       />
       
       {/* Current image (top layer) */}
@@ -74,7 +104,7 @@ const HeroImage: React.FC = () => {
         key={`active-${currentImageIndex}`}
         src={images[currentImageIndex]}
         alt="Hero Background Current"
-        className="absolute inset-0 object-cover h-full w-full"
+        className="absolute inset-0 md:object-cover md:h-full md:w-full"
         style={{
           ...transitionStyle,
           opacity: isTransitioning ? 0 : 1,

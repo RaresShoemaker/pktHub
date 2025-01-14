@@ -27,7 +27,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                                 <div className='md:hidden flex justify-end mt-8'>
                                     <MobileMenu />
                                 </div>
-                                <div className="md:sticky md:top-4 md:max-h-[800px] max-h-[600px] h-screen">
+                                <div className="md:sticky md:top-4 md:max-h-[800px] max-h-[400px] h-screen">
                                     <MenuCategory />
                                 </div>
                             </div>

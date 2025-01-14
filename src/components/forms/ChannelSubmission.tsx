@@ -2,6 +2,7 @@ import React, { FormEvent, useState, useRef } from 'react';
 import { useToast } from '../../context/ToasterBannerContext/hooks';
 import { TOASTER_TYPES } from '../../context/ToasterBannerContext/constants';
 import CustomInput from '../CustomInput';
+import CustomDropdown from '../CustomDropDown';
 import ImgUploader from '../ImageUploader';
 
 const ChannelSubmissionForm = () => {
@@ -12,7 +13,8 @@ const ChannelSubmissionForm = () => {
     company_name: '',
     email: '',
     platform_description: '',
-    platform_link: ''
+    platform_link: '',
+    category: ''
   });
   const [file, setFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,7 +23,17 @@ const ChannelSubmissionForm = () => {
 
   const FORM_ID = import.meta.env.VITE_JOTFORM_FORM_ID;
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const categoryOptions = [
+    { value: 'Media', label: 'Media' },
+    { value: 'Music', label: 'Music' },
+    { value: 'Gaming', label: 'Gaming' },
+    { value: 'Casino', label: 'Casino' },
+    { value: 'Crypto/Tech', label: 'Crypto/Tech' },
+    { value: 'AI', label: 'AI' },
+    { value: 'Meme', label: 'Meme' }
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -34,7 +46,8 @@ const ChannelSubmissionForm = () => {
       company_name: '',
       email: '',
       platform_description: '',
-      platform_link: ''
+      platform_link: '',
+      category: ''
     });
     setFile(null);
     setResetKey(prev => prev + 1);
@@ -46,7 +59,8 @@ const ChannelSubmissionForm = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formData.company_name || !formData.email || !formData.platform_description || !formData.platform_link) {
+    if (!formData.company_name || !formData.email || !formData.platform_description || 
+        !formData.platform_link || !formData.category) {
       showToast('Please fill in all fields', TOASTER_TYPES.ERROR, 3000);
       return;
     }
@@ -65,6 +79,7 @@ const ChannelSubmissionForm = () => {
         form.q12_email.value = formData.email;
         form.q7_typeA7.value = formData.platform_description;
         form.q8_typeA8.value = formData.platform_link;
+        form.q15_category.value = formData.category;
         form.q14_verifiedEmail.value = 'null';
         
         const fileList = new DataTransfer();
@@ -122,6 +137,13 @@ const ChannelSubmissionForm = () => {
           value={formData.platform_link}
           onChange={handleInputChange}
         />
+        <CustomDropdown
+          label="Category"
+          id="category"
+          value={formData.category}
+          options={categoryOptions}
+          onChange={handleInputChange}
+        />
         <ImgUploader 
           onFileSelect={(file: File | null) => setFile(file)} 
           resetKey={resetKey}
@@ -157,6 +179,7 @@ const ChannelSubmissionForm = () => {
         <input type="text" name="q7_typeA7" />
         <input type="text" name="q8_typeA8" />
         <input type="text" name="q14_verifiedEmail" />
+        <select name="q15_category"></select>
         <input type="file" name="q11_fileUpload[]" multiple />
       </form>
     </>

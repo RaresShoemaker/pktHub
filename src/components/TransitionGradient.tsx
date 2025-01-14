@@ -70,10 +70,8 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
       {/* Current gradient layers */}
       <div
         key={`current-1-${activeIndex}`}
-        className="absolute w-screen flex-shrink-0"
+        className="absolute w-screen flex-shrink-0 md:bottom-[-215px] bottom-[25px] md:h-[429px] h-[210px]"
         style={{
-          bottom: '-215px',
-          height: '429px',
           background: currentGradient[0],
           filter: 'blur(44px)',
           zIndex: 1,
@@ -85,10 +83,8 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
       />
       <div
         key={`current-2-${activeIndex}`}
-        className="absolute w-screen flex-shrink-0"
+        className="absolute w-screen flex-shrink-0 md:bottom-[-315px] bottom-[25px] md:h-[429px] h-[210px]"
         style={{
-          bottom: '-355px',
-          height: '429px',
           background: currentGradient[1],
           filter: 'blur(54px)',
           zIndex: 1,
@@ -100,10 +96,8 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
       />
       <div
         key={`current-3-${activeIndex}`}
-        className="absolute w-screen flex-shrink-0"
+        className="absolute w-screen flex-shrink-0 md:bottom-[-315px] bottom-[25px] md:h-[429px] h-[210px]"
         style={{
-          bottom: '-315px',
-          height: '429px',
           background: currentGradient[2],
           filter: 'blur(64px)',
           zIndex: 1,
@@ -117,10 +111,8 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
       {/* Next gradient layers */}
       <div
         key={`next-1-${nextIndex}`}
-        className="absolute w-screen flex-shrink-0"
+        className="absolute w-screen flex-shrink-0 md:bottom-[-215px] bottom-[25px] md:h-[429px] h-[210px]"
         style={{
-          bottom: '-215px',
-          height: '429px',
           background: nextGradient[0],
           filter: 'blur(44px)',
           zIndex: 1,
@@ -133,10 +125,8 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
       />
       <div
         key={`next-2-${nextIndex}`}
-        className="absolute w-screen flex-shrink-0"
+        className="absolute w-screen flex-shrink-0 md:bottom-[-315px] bottom-[25px] md:h-[429px] h-[210px]"
         style={{
-          bottom: '-355px',
-          height: '429px',
           background: nextGradient[1],
           filter: 'blur(54px)',
           zIndex: 1,
@@ -149,10 +139,8 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
       />
       <div
         key={`next-3-${nextIndex}`}
-        className="absolute w-screen flex-shrink-0"
+        className="absolute w-screen flex-shrink-0 md:bottom-[-315px] bottom-[25px] md:h-[429px] h-[210px]"
         style={{
-          bottom: '-315px',
-          height: '429px',
           background: nextGradient[2],
           filter: 'blur(64px)',
           zIndex: 1,

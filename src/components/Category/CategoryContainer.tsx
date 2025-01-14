@@ -3,6 +3,7 @@ import { CategoryCardProps } from './CategoryCard';
 import { ChevronRight } from 'lucide-react';
 import CategoryCard from './CategoryCard';
 import GradientDivider from './GradientDivider';
+import { Link } from 'react-router-dom';
 
 interface CategoryContainerProps {
 	title: string;
@@ -44,8 +45,10 @@ const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
 								</div>
 							))}
 							<div className='flex text-white max-h-[120px] max-w-[224.5px] w-[120px] h-[100px] md:h-[120px] items-center'>
+								<Link to={`/?category=${title.toLowerCase()}`} className='flex gap-1 items-center'>
 								<p className='font-semibold underline underline-offset-4'>See more</p>
 								<ChevronRight />
+								</Link>
 							</div>
 						</div>
 					</div>

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const HeroContainer: React.FC = () => {
 	return (
 		<>
-			<div className='absolute top-0 left-0 right-0 h-[700px] w-full'>
+			<div className='absolute top-0 left-0 right-0 h-[450px] md:h-[700px] w-full'>
 				<HeroImage />
 				<TransitionGradient />
 			</div>

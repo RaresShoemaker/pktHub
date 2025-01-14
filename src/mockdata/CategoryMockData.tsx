@@ -37,7 +37,7 @@ export const CategoryData: CategoryDataType = {
 			},
 			{
 				alt: 'Audius',
-				href: 'https://audius.co/',
+				href: 'https://www.audius.co',
 				logo: <MusicIcons.AudiusLogoRegular />,
 				logoWhite: <MusicIcons.AudiusLogoWhite />
 			},
@@ -276,37 +276,37 @@ export const CategoryData: CategoryDataType = {
 		data: [
 			{
 				alt: 'Acorn Tv',
-				href: 'https://www.acorn.tv/',
+				href: 'https://www.acorn.tv',
 				logo: <MediaIcons.AcornLogoRegular />,
 				logoWhite: <MediaIcons.AcornLogoWhite />
 			},
 			{
 				alt: 'Prime Video',
-				href: 'https://www.primevideo.com/',
+				href: 'https://www.primevideo.com',
 				logo: <MediaIcons.AmzPrimeLogoRegular />,
 				logoWhite: <MediaIcons.AmzPrimeLogoWhite />
 			},
 			{
 				alt: 'Apple Tv',
-				href: 'https://www.apple.com/apple-tv-plus/',
+				href: 'https://www.apple.com/tv',
 				logo: <MediaIcons.AppleTvLogoRegular />,
 				logoWhite: <MediaIcons.AppleTvLogoWhite />
 			},
 			{
 				alt: 'Disney Plus',
-				href: 'https://www.disneyplus.com/',
+				href: 'https://www.disneyplus.com',
 				logo: <MediaIcons.DisneyLogoRegular />,
 				logoWhite: <MediaIcons.DisneyLogoWhite />
 			},
 			{
 				alt: 'Fireside',
-				href: 'https://www.fireside.fm/',
+				href: 'https://firesidechat.com',
 				logo: <MediaIcons.FiresideLogoRegular />,
 				logoWhite: <MediaIcons.FiresideLogoWhite />
 			},
 			{
 				alt: 'Fubo Tv',
-				href: 'https://www.fubo.tv/',
+				href: 'https://www.fubo.tv',
 				logo: <MediaIcons.FuboTvLogoRegular />,
 				logoWhite: <MediaIcons.FuboTvLogoWhite />
 			},
@@ -324,13 +324,13 @@ export const CategoryData: CategoryDataType = {
 			},
 			{
 				alt: 'Lbry',
-				href: 'https://lbry.com/',
+				href: 'https://lbry.com',
 				logo: <MediaIcons.LbryLogoRegular />,
 				logoWhite: <MediaIcons.LbryLogoWhite />
 			},
 			{
 				alt: 'Mogul',
-				href: 'https://onmogul.com/',
+        href: 'https://film3.mogulproductions.com/platform/showcase',
 				logo: <MediaIcons.MogulLogoRegular />,
 				logoWhite: <MediaIcons.MogulLogoWhite />
 			},
@@ -348,37 +348,37 @@ export const CategoryData: CategoryDataType = {
 			},
 			{
 				alt: 'Paramount Plus',
-				href: 'https://www.paramountplus.com/',
+        href: 'https://www.paramountplus.com',
 				logo: <MediaIcons.ParamountLogoRegular />,
 				logoWhite: <MediaIcons.ParamountLogoWhite />
 			},
 			{
 				alt: 'Peacock',
-				href: 'https://www.peacocktv.com/',
+				href: 'https://www.peacocktv.com',
 				logo: <MediaIcons.PeacockLogoRegular />,
 				logoWhite: <MediaIcons.PeacockLogoWhite />
 			},
 			{
 				alt: 'Pluto Tv',
-				href: 'https://www.pluto.tv/',
+				href: 'https://www.pluto.tv',
 				logo: <MediaIcons.PlutoLogoRegular />,
 				logoWhite: <MediaIcons.PlutoLogoWhite />
 			},
 			{
 				alt: 'Ritestream',
-				href: 'https://ritestream.com/',
+				href: 'https://www.ritestream.com',
 				logo: <MediaIcons.RitestreamLogoRegular />,
 				logoWhite: <MediaIcons.RitestreamLogoWhite />
 			},
 			{
 				alt: 'Sling',
-				href: 'https://www.sling.com/',
+				href: 'https://www.sling.com',
 				logo: <MediaIcons.SlingLogoRegular />,
 				logoWhite: <MediaIcons.SlingLogoWhite />
 			},
 			{
 				alt: 'Tubi',
-				href: 'https://tubitv.com/',
+				href: 'https://www.tubi.tv',
 				logo: <MediaIcons.TubiLogoRegular />,
 				logoWhite: <MediaIcons.TubiLogoWhite />
 			},
